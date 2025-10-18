@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(45deg, rgb(0, 0, 224), rgb(0, 134, 212), rgb(0, 0, 224));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header .logo h1 {
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color: #fff;
+    margin: 0 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 40px;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    background:linear-gradient(90deg,rgb(62, 62, 255), rgb(0, 136, 148));
+    transform: translateY(-5px);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.534);
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 150px; 
+    padding-bottom: 50px;
+}
+
+/* ===== TARJETAS ===== */
+.tarjeta {
+    width: 80%;
+    max-width: 900px;
+    padding: 30px;
+    background: #f7f7f7; 
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+/* borde RGB animado */
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    padding: 3px; 
+    border-radius: 30px;
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        lime,
+        cyan,
+        blue,
+        magenta,
+        red
+    );
+    background-size: 400%;
+    animation: rgbBorde 6s linear infinite;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 2;
+}
+
+
+@keyframes rgbBorde {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* contenido interno */
+.tarjeta > * {
+    position: relative;
+    z-index: 3;
+}
+
+
+.tarjeta img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tarjeta h2 {
+    color: rgb(0, 0, 199);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    font-size: 18px;
+    text-align: justify;
+    color: #333;
+}
+
+.tarjeta:hover {
+    transform: scale(1.02);
+    background-color: #d6e7ff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .tarjeta {
+        width: 90%;
+    }
+
+    .tarjeta img {
+        width: 100px;
+    }
+}

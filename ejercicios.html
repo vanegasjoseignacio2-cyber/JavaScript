@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+    <link rel="stylesheet" href="./css/ejercicios.css">
+    <script
+      src="https://kit.fontawesome.com/bdc4e23805.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>JavaScript</h1>
+            </div>       
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./ejercicios.html">Ejercicios</a></li>
+                </ul>
+                
+            </nav>
+            
+        </header>
+    <section id="inicio" class="inicio">
+        <button onclick="mostrarMensaje()">Click aquí</button>
+            <div class="cards">
+            <div class="imagen">
+                <h2>suma</h2>
+                <img src="./img/ejercicio1.png" alt="">
+                <div class="contenido">
+                    <h3>Crea una función que tome dos números como argumentos y devuelva su suma.</h3>
+                    <p>La función sumar(num1, num2) recibe dos números y devuelve su suma con return num1 + num2
+                    luego, console .log(sumar(8, 2)); ejecuta la función con los valores 8 y 2, mostrando 10 en la consola.</p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Contador de caracteres</h2>
+                <img src="./img/ejercicio2.png" alt="">
+                <div class="contenido">
+                    <h3>Crea una función que tome una cadena como argumento y devuelva el número de 
+caracteres que tiene.</h3>
+                    <p>El código guarda la palabra "casa", usa .length para contar sus letras y muestra el resultado (4)en la consola.</p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Edad</h2>
+                <img src="./img/ejercicio3.png" alt="">
+                <div class="contenido">
+                    <h3>Solicita al usuario su edad y muestra un mensaje que indique si es mayor de edad o no.</h3>
+                    <p>Este código pide al usuario su nombre y su género mediante dos cuadros de diálogo (prompt). Luego convierte el género a minúsculas con toLowerCase() para evitar errores por mayúsculas.
+Después, con una estructura if...else if...else, verifica que género es o si el género es incorrecto</p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Positivo o negativo</h2>
+                <img src="./img/ejercicio4.png" alt="">
+                <div class="contenido">
+                    <h3> Pide al usuario que ingrese un número y muestra un mensaje que indique si es 
+positivo o negativo.</h3>
+                    <p>Se le solicita al usuario un número, con if y else se verifiva si es negativo o positivo y el cosole.log nos dice el resultado</p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Calculadora</h2>
+                <img src="./img/ejercicio5.png" alt="">
+                <div class="contenido">
+                    <h3>Solicitar al usuario dos numeros y que seleccione  de las operaciones basicas   y 
+muestre el resultado</h3>
+                    <p>Se piden dos números al usuario y la operación que desea hacer, con las sentencias if, else if e if se verifica
+                        que operación eligió el usuario y luego mediante una función se realiza la operación </p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Par o impar</h2>
+                <img src="./img/ejercicio6.png" alt="">
+                <div class="contenido">
+                    <h3>Pide al usuario que ingrese un número y muestra un mensaje que indique si es par o 
+impar.</h3>
+                    <p>Se pide un número y luego con if y else mediante una operación se identificó si era par o impar</p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Género</h2>
+                <img src="./img/ejercicio7.png" alt="">
+                <div class="contenido">
+                    <h3>Solicita al usuario su nombre y su género, y muestra un mensaje que indique si es 
+hombre o mujer.</h3>
+                    <p>El código solicita al usuario su nombre y género mediante prompt() y luego convierte el género a minúsculas con toLowerCase() para evitar errores por mayúsculas.
+Después usa una estructura if...else if...else para comparar el valor ingresado</p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Tabla de multiplicar</h2>
+                <img src="./img/ejercicio8.png" alt="">
+                <div class="contenido">
+                    <h3>Realizar la tabla de multiplicar del número ingresado por el usuario</h3>
+                    <p>Se le pide un número al usuario para hacer esa tabla, y luego con un bucle se hace la tabla hasta el 10 con el número ingresado. </p>
+                </div>
+            </div>
+            <div class="imagen">
+                <h2>Mayúsculas</h2>
+                <img src="./img/ejercicio9.png" alt="">
+                <div class="contenido">
+                    <h3>Crea una función que tome un array de strings como argumento y devuelva un nuevo 
+array con todas las strings en mayúsculas.</h3>
+                    <p>Este código guarda la palabra "jose" en la variable pal, luego usa el método toUpperCase() para convertirla a mayúsculas y finalmente la muestra en la consola con console.log().
+El resultado que se imprime es JOSE. </p>
+                </div>
+            </div>
+            </div>
+    </section>
+      
+<script>
+function Mensaje(nombre, edad, profesion) {
+  const mensaje = `Bienvenido ${nombre} al curso de Java, tienes ${edad} años y eres ${profesion}.`;
+  console.log(mensaje);
+  alert(mensaje);
+}
+
+// Pedimos los datos cuando se carga la página
+window.onload = function() {
+  const nombre = prompt("¿Cuál es tu nombre?");
+  const edad = prompt("¿Cuántos años tienes?");
+  const profesion = prompt("¿Cuál es tu profesión?");
+  
+  Mensaje(nombre, edad, profesion);
+};
+
+    function mostrarMensaje() {
+      alert("Hola, bienvenido al curso práctico de JavaScript");
+    }
+  </script>
+<script src="./carrito.js">
+</script>
+</body>
+</html>
